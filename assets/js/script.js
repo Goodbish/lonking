@@ -17,6 +17,7 @@
 
 new Swiper(".screen__swiper", {
   slidesPerView: 1,
+  clickable: true,
 
   pagination: {
     el: ".swiper-pagination",

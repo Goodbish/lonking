@@ -1979,11 +1979,11 @@ body {
   .header__right {
     margin-left: auto; }
   .header__middle {
-    min-width: 788px;
+    max-width: 788px;
     padding-left: 24px; }
     @media (max-width: 1300px) {
       .header__middle {
-        min-width: inherit; } }
+        max-width: inherit; } }
     .header__middle-item {
       display: -webkit-box;
       display: -ms-flexbox;
