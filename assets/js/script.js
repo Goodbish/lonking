@@ -89,6 +89,16 @@ if (accordions !== null) {
         })
     });
 }
+const checkboxBlock = document.querySelector('.contacts__checkbox-block');
+
+if (checkboxBlock !== null) {
+    const checkboxInput = checkboxBlock.querySelector('input[type="checkbox"]');
+    checkboxBlock.addEventListener('click', function(event) {
+        event.preventDefault();
+        checkboxBlock.classList.toggle('contacts__checkbox-block--active');
+        checkboxInput.checked = !checkboxInput.checked; 
+    })
+}
 
 new Swiper(".preview-catalog__swiper", {
     slidesPerView: 3,
@@ -103,6 +113,17 @@ new Swiper(".preview-catalog__swiper", {
         nextEl: ".preview-catalog__navigation--next",
         prevEl: ".preview-catalog__navigation--prev",
     },
+
+    breakpoints: {
+        // when window width is >= 0px
+        0: {
+          slidesPerView: 1,
+        },
+        // when window width is >= 991px
+        991: {
+          slidesPerView: 3,
+        }
+    }
 });
 
 const rangeCost = document.getElementById("cost");
