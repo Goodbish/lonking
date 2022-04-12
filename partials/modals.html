@@ -1,0 +1,50 @@
+<section class="modal" id="order_service">
+    <div class="modal__wrapper ">
+        <form class="modal__form" >
+            <h2 class="modal__title">Отправить заявку</h2>
+
+            <h3 class="modal__subtitle">Отправьте заявку и получите подарок</h3>
+            
+            <div class="contacts__form-block">
+                <div class="contacts__form-column">
+                    <div class="contacts__map">
+                        <img src="./assets/img/main/modal-image.png" alt="" class="contacts__image">
+                    </div>
+                </div>
+                <div class="contacts__form-column contacts__form-column--form">
+                    <form class="contacts__form">
+                        
+
+                        <label class="contacts__item">
+                            <input type="text" name="name" placeholder="Имя" class="contacts__input">
+                        </label>
+                        <label class="contacts__item">
+                            <input type="text" name="phone" placeholder="Телефон" class="contacts__input">
+                        </label>
+                        <label class="contacts__item">
+                            <input type="email" name="email" placeholder="Емейл" class="contacts__input">
+                        </label>
+                        <label class="contacts__item contacts__item-textblock">
+                            <textarea name="text" placeholder="Сообщение" class="contacts__input contacts__input-textblock"></textarea>
+                        </label>
+
+                        <label for="form-privacy" class="contacts__checkbox-block">
+                            <div  class="contacts__checkbox-box">
+                                <input type="checkbox" name="privacy" id="form-privacy" class="contacts__input">
+                            </div>
+                            <span class="contacts__checkbox-text">Согласие на обработку персональных данных </span>
+                        </label>
+
+                        <button type="submit" class="contacts__submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div data-go-back class="modal__close">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28 28L16 16M28 16L16 28" stroke="#FF3600" stroke-width="2.06448" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </form>
+    </div>
+</section>
