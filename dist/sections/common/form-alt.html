@@ -1,0 +1,33 @@
+<div class="contacts__form-container">
+    <form class="contacts__form">
+        <h3 class="contacts__form-title">Задать вопрос</h3>
+
+        <div class="contacts__form-list">
+            <div class="contacts__form-item">
+                <label class="contacts__item">
+                    <input type="text" name="name" placeholder="Имя" class="contacts__input">
+                </label>
+                <label class="contacts__item">
+                    <input type="text" name="phone" placeholder="Телефон" class="contacts__input">
+                </label>
+                <label class="contacts__item">
+                    <input type="email" name="email" placeholder="Емейл" class="contacts__input">
+                </label>
+            </div>
+            <div class="contacts__form-item">
+                <label class="contacts__item contacts__item-textblock contacts__item-textblock--smaller">
+                    <textarea name="text" placeholder="Сообщение" class="contacts__input contacts__input-textblock"></textarea>
+                </label>
+
+                <label for="form-privacy-modal" class="contacts__checkbox-block">
+                    <div  class="contacts__checkbox-box">
+                        <input type="checkbox" name="privacy" id="form-privacy-modal" class="contacts__input">
+                    </div>
+                    <span class="contacts__checkbox-text">Согласие на обработку персональных данных </span>
+                </label>
+
+                <button type="submit" class="contacts__submit">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>

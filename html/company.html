@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    @@include('./partials/header.html')
+    <main class="main">
+        <div class="main__line"></div>
+
+        <div class="wrapper">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs-item">Главная страница</a>
+                <a href="#" class="breadcrumbs-item">Компания</a>
+            </div>
+        </div>
+
+        @@include('./sections/company.html')
+    </main>
+    @@include('./partials/modals.html')
+    @@include('./partials/footer.html')
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    @@include('./partials/header.html')
+    <main class="main">
+        <div class="main__line"></div>
+
+        <div class="wrapper">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs-item">Главная страница</a>
+                <a href="/catalog.html" class="breadcrumbs-item">Каталог</a>
+                <a href="#" class="breadcrumbs-item">Мини-погрузчики / Lonking CDM 312</a>
+            </div>
+        </div>
+
+        @@include('./sections/product.html')
+        @@include('./sections/common/other.html')
+    </main>
+    @@include('./partials/modals.html')
+    @@include('./partials/footer.html')
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

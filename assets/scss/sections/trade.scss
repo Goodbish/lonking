@@ -1,0 +1,143 @@
+.trade {
+    background: $bg1;
+
+    &__wrapper {
+        padding: 32px 0 42px;
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__subtitle {
+        @include title;
+        display: block;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        padding-top: 7px;
+
+        &--primary {
+            color: $primary;
+        }
+
+        &--pt {
+            padding-top: 25px;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 52px;
+        padding-top: 18px;
+        align-items: center;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 991px) {
+            max-height: 300px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+
+        @media (max-width: 991px) {
+            row-gap: 12px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 14px 22px;
+        column-gap: 26px;
+        background: #FFFFFF;
+        border: 1px solid #D8D8D8;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        &-text {
+            display: block;
+            font-size: 18px;
+            line-height: 21px;
+            max-width: 508px;
+
+            @media (max-width: 991px) {
+                padding-top: 14px;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 40px;
+        flex-wrap: wrap;
+
+        @media (max-width: 991px) {
+            justify-content: space-between;
+        }
+
+        &-item {
+            width: 196px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 16px;
+                width: 108px;
+            }
+        }
+
+        &-text {
+            display: block;
+            padding-top: 20px;
+            font-size: 18px;
+            line-height: 21px;
+            max-width: 180px;
+            text-align: center;
+
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        &-image {
+            @media (max-width: 991px) {
+                width: 106px;
+                height: 106px;
+                object-fit: contain;
+                margin: 0 auto;
+            }
+        }
+    }
+}

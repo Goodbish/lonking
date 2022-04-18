@@ -1,0 +1,109 @@
+.guarantee {
+    background: $bg1;
+
+    &__wrapper {
+        padding: 42px 0 54px;
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__content {
+        padding-top: 36px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        gap: 20px;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        // align-items: center;
+        list-style-position: outside;
+        padding-left: 0;
+        counter-reset: my-awesome-counter;
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: 42px;
+        margin-left: 48px;
+        counter-increment: my-awesome-counter;
+
+        &-text {
+            display: block;
+            font-size: 24px;
+            line-height: 28px;
+            // padding-left: 56px;
+
+            @media (max-width: 991px) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        &::before {
+            content: counter(my-awesome-counter);
+            color: white;
+            font-weight: 700;
+            font-size: 36px;
+            position: absolute;
+            --size: 36px;
+            left: calc(-1 * var(--size) - 10px);
+            width: var(--size);
+            height: var(--size);
+            line-height: var(--size);
+            top: 3px;
+            background: $primary;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 348px;
+
+        @media (max-width: 991px) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 416px;
+        padding: 16px 0;
+        text-align: center;
+        background: $primary;
+        color: white;
+        outline: none;
+        border: none;
+        margin-top: 36px;
+        font-size: 24px;
+        line-height: 28px;
+        cursor: pointer;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+
+        @media (max-width: 991px) {
+            margin: 20px auto 0;
+        }
+    }
+}

@@ -1,0 +1,221 @@
+.footer {
+    background: $footer-background;
+
+    &__wrapper {
+        padding: 57px 0 32px;
+
+        @media (max-width: 991px) {
+            padding: 28px 0 20px;
+        }
+    }
+
+    &__row {
+        & + & {
+            padding-top: 76px;
+
+            @media (max-width: 991px) {
+                padding-top: 26px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: 240px;
+        font-size: 18px;
+        width: 100%;
+        line-height: 21px;
+        color: #FFFFFF;
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+
+        &--large {
+            max-width: 250px;
+
+            @media (max-width: 991px) {
+                max-width: 100%;
+            }
+        }
+
+        &--items-left {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
+        }
+
+        &-title {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $primary;
+        }
+
+        &-link {
+            display: block;
+            font-size: 18px;
+            line-height: 21px;
+            color: white;
+
+            & + & {
+                padding-top: 24px;
+            }
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 30px;
+
+            @media (max-width: 991px) {
+                padding-bottom: 0;
+            }
+        }
+
+        &-toggle {
+            display: none;
+
+            @media (max-width: 991px) {
+                display: block;
+                height: 20px;
+            }
+        }
+
+        &-content {
+            @media (max-width: 991px) {
+                display: none;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+
+        & + & {
+            padding-top: 26px;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+
+        &-link {
+            display: flex;
+        }
+
+        &-icon {
+            display: block;
+            padding-right: 10px;
+            height: 22px;
+        }
+
+        &-sublink {
+            display: block;
+
+            &:nth-child(2) {
+                padding-left: 9px;
+            }
+
+            &:nth-child(3) {
+                padding-left: 5px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        padding-top: 21px;
+
+        &-link {
+            display: block;
+
+            & + & {
+                padding-left: 8px;
+            }
+        }
+    }
+
+    &__callback {
+        display: block;
+        margin-top: 24px;    
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        background: transparent;
+        color: $primary;
+        border: 1px solid $primary;
+        cursor: pointer;
+
+        @media (max-width: 991px) {
+            width: 250px;
+            margin: 20px auto 0;
+        }
+    }
+
+    &__bottom {
+        &-link {
+            & + & {
+                padding-left: 13px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: underline;
+    }
+
+    &__mobile {
+        display: none;
+
+        @media (max-width: 991px) {
+            display: block;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .toggle {
+        &__header {
+            &-icon {
+                transition: all 0.3s ease;
+
+                &--active {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__content {
+            &--active {
+                display: block;
+            }
+        }
+    }
+}

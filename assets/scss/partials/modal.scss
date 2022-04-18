@@ -1,0 +1,129 @@
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* for Safari */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($color: black, $alpha: 0.7);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity .4s ease;
+
+
+    &.show {
+        opacity: 1;
+        overflow-y: auto;
+
+        // ie
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            display: flex !important;
+        }
+
+        //safari
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+                @media (max-height: 801px) and (max-width: 991px) {
+                    align-items: inherit;
+                    align-content: unset;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+    }
+
+    & .form {
+        padding-top: 40px;
+    }
+
+    &__title {
+        @include title;
+        font-size: 36px;
+        line-height: 42px;
+
+        @media (max-width: 576px) {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        padding-top: 10px;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 60px;
+        max-width: 1180px;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 0px 20px black;
+        text-align: center;
+        position: relative;
+        max-height: 100vh;
+        overflow-y: auto;
+
+        @media (max-width: 991px) {
+            // padding: 60px 16px 20px;
+            height: fit-content;
+            padding: 24px;
+            width: 100%;
+            border-radius: unset;
+
+            @media all and (-ms-high-contrast: none),
+            (-ms-high-contrast: active) {
+                height: calc(100% + 40px)
+            }
+        }
+
+        @media (max-width: 576px) {
+            height: 100%;
+            display: grid;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        path {
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 576px) {
+            top: 14px;
+            right: 12px;
+        }
+
+        &:hover {
+            & path {
+                stroke: #b62902;
+            }
+        }
+    }
+
+    &__link {
+    }
+
+    &__form {
+        width: 100%;
+    }
+}

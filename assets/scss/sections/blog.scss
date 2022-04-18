@@ -1,0 +1,136 @@
+.blog {
+    &__wrapper {
+        padding-top: 16px;
+    }
+
+    &__title {
+        @include title-small;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__content {
+        padding: 40px 0 52px;
+    }
+
+    &__filter {
+        position: relative;
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 28px 12px 14px;
+        border: 1px solid $primary;
+        width: 290px;
+
+        &-active {
+            font-size: 18px;
+            line-height: 21px;
+            color: $primary;
+        }
+
+        &-check {
+            position: absolute;
+            top: 16px;
+            right: 12px;
+            width: 12px;
+            height: 12px;
+        }
+
+        &-list {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 1px solid #D8D8D8;
+        
+        &-title {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: left;
+            padding-top: 24px;
+            color: $primary;
+        }
+
+        &-text {
+            display: block;
+            padding: 20px 0 28px;
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        &-content {
+            padding: 26px 29px 28px;
+
+            @media (max-width: 991px) {
+                padding: 26px 12px;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        margin: auto auto 0;    
+        width: 206px;
+        padding: 12px 0;
+        text-align: center;
+        color: $primary;
+        border: 1px solid $primary;
+        cursor: pointer;
+
+        @media (max-width: 991px) {
+            width: 158px;
+            font-size: 18px;
+            line-height: 21px;
+            padding: 10px 0;
+        }
+    }
+
+    &__time {
+        &-block {
+            display: flex;
+            align-items: center;
+            color: #B8B8B8;
+        }
+
+        &-text {
+            display: block;
+            font-size: 18px;
+            line-height: 21px;
+            padding-left: 8px;
+        }
+    }
+}

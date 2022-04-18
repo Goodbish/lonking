@@ -1,0 +1,24 @@
+.breadcrumbs {
+    display: flex;
+    color: #C4C4C4;
+    margin-top: 32px;
+
+    &-item {
+        display: block;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: ' > ';
+            }
+        }
+
+        & + & {
+            padding-left: 3px;
+        }
+    }
+}

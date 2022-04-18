@@ -1,0 +1,37 @@
+@import './lib/normalize';
+@import './lib/fancybox';
+@import './lib/swiper';
+@import './lib/range-slider.min';
+@import './global/fonts';
+@import './global/common';
+@import './global/variaibles';
+@import './global/mixins';
+
+// partials
+@import './partials/header';
+@import './partials/footer';
+@import './partials/modal';
+@import './partials/breadcrumbs';
+@import './partials/content';
+
+// sections
+@import './sections/screen';
+@import './sections/preview';
+@import './sections/about';
+@import './sections/service';
+@import './sections/news';
+@import './sections/photogallery';
+@import './sections/videos';
+
+@import './sections/lonking';
+@import './sections/guarantee';
+@import './sections/calculator';
+@import './sections/trade';
+@import './sections/more';
+
+@import './sections/product';
+@import './sections/other';
+
+@import './sections/contacts';
+@import './sections/company';
+@import './sections/blog';

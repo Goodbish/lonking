@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    @@include('./partials/header.html')
+    <main class="main">
+        <div class="main__line"></div>
+
+        <div class="wrapper">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs-item">Главная страница</a>
+                <a href="#" class="breadcrumbs-item">Контакты</a>
+            </div>
+        </div>
+
+        <section class="contacts">
+            <div class="wrapper">
+                <div class="contacts__wrapper">
+                    <div class="contacts__title-block">
+                        <h2 class="contacts__title contacts__title--left">Контакты</h2>
+
+                        <div class="header__location">
+                            <img src="./assets/img/main/icons/location.png" alt="" class="header__middle-icon">
+                            <span class="header__location-active contacts__location-text">Санкт-Петербург</span>
+                                <!-- here will be sublocation -->
+    
+                            <div class="header__toggle-block">
+                                <img src="./assets/img/main/icons/arrow-toggle.png" alt="" class="header__toggle-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts__row">
+                        <div class="contacts__row-item contacts__links">
+                            <a href="tel:+78123137784" class="contacts__links-item">
+                                <img src="./assets/img/main/icons/phone.png" alt="phone" class="contacts__icon">
+                            </a>
+                            <a href="tel:+78123137784" class="contacts__links-item contacts__links-phone">
+                                +7 (812) 313-77-84
+                            </a>
+                            <a href="#" class="contacts__links-item">
+                                <img src="./assets/img/main/icons/wa.png" alt="WhatsApp" class="contacts__links-icon">
+                            </a>
+                            <a href="#" class="contacts__links-item">
+                                <img src="./assets/img/main/icons/tg.png" alt="Telegram" class="contacts__links-icon">
+                            </a>
+                        </div>
+                        <div class="contacts__row-item">
+                            <img src="./assets/img/main/icons/email.png" alt="" class="contacts__icon">
+                            <span  class="contacts__link">info@zts-sbp.ru</span>
+        
+                            <a href="mailto:info@zts-sbp.ru" class="contacts__link-area"></a>
+                        </div>
+                        <div class="contacts__row-item">
+                            <img src="./assets/img/main/icons/location.png" alt="" class="contacts__icon">
+                            <span class="contacts__location">198216 Санкт-Петербург,
+                                Краснопутиловская 46</span>
+                        </div>
+                    </div>
+        
+                    <div class="contacts__form-split">
+                        <div class="contacts__form-column">
+                            <div class="contacts__map">
+                                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad5d77f78f80c8f8adf0f3c5d6ddd21d797006f51de237704b9f658afcbaf35dc&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="contacts__form-column">
+                           <div class="contacts__slider-block">
+                                <div class="swiper contacts__slider">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                        <div class="swiper-slide contacts__slider-item">
+                                            <img src="./assets/img/other/contacts.jpg" alt="" class="contacts__slider-image">
+                                        </div>
+                                        <div class="swiper-slide contacts__slider-item">
+                                            <img src="./assets/img/other/contacts.jpg" alt="" class="contacts__slider-image">
+                                        </div>
+                                        <div class="swiper-slide contacts__slider-item">
+                                            <img src="./assets/img/other/contacts.jpg" alt="" class="contacts__slider-image">
+                                        </div>
+                                    </div>
+                                    <!-- If we need navigation buttons -->
+                                    
+                                </div>
+                           </div>
+
+                           <div class="contacts__navigation contacts__navigation--next">
+                            <img src="./assets/img/main/arrow-left.png" alt="" class="contacts__navigation-image">
+                            </div>
+                            <div class="contacts__navigation contacts__navigation--prev">
+                                <img src="./assets/img/main/arrow-left.png" alt="" class="contacts__navigation-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__form-container">
+                        <form class="contacts__form">
+                            <h3 class="contacts__form-title">Задать вопрос</h3>
+
+                            <div class="contacts__form-list">
+                                <div class="contacts__form-item">
+                                    <label class="contacts__item">
+                                        <input type="text" name="name" placeholder="Имя" class="contacts__input">
+                                    </label>
+                                    <label class="contacts__item">
+                                        <input type="text" name="phone" placeholder="Телефон" class="contacts__input">
+                                    </label>
+                                    <label class="contacts__item">
+                                        <input type="email" name="email" placeholder="Емейл" class="contacts__input">
+                                    </label>
+                                </div>
+                                <div class="contacts__form-item">
+                                    <label class="contacts__item contacts__item-textblock contacts__item-textblock--smaller">
+                                        <textarea name="text" placeholder="Сообщение" class="contacts__input contacts__input-textblock"></textarea>
+                                    </label>
+            
+                                    <label for="form-privacy-modal" class="contacts__checkbox-block">
+                                        <div  class="contacts__checkbox-box">
+                                            <input type="checkbox" name="privacy" id="form-privacy-modal" class="contacts__input">
+                                        </div>
+                                        <span class="contacts__checkbox-text">Согласие на обработку персональных данных </span>
+                                    </label>
+            
+                                    <button type="submit" class="contacts__submit">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./partials/modals.html')
+    @@include('./partials/footer.html')
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
