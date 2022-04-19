@@ -66,4 +66,7 @@ if (themeBlock !== null) {
     headerBlock.classList.add('header--dark');
     document.querySelector('.header__logo').classList.add('header__logo--hidden');
     document.querySelector('.header__logo--alt').classList.add('header__logo--show');
+    document.querySelectorAll('.select__toggle').forEach(element => {
+        element.classList.add('select__toggle--dark');
+    })
 }

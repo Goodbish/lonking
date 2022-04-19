@@ -164,6 +164,7 @@
     &__location {
         display: flex;
         align-items: center;
+        max-width: 250px;
         transition: opacity 0.3s ease;
 
         &--hidden {
@@ -247,6 +248,14 @@
                 width: 27px;
                 height: 27px;
             }
+
+            &--phone {
+                @media (max-width: 991px) {
+                    width: 23px;
+                    height: 23px;
+                    margin-left: 7px;
+                }
+            }
         }
     }
 
@@ -258,6 +267,8 @@
         color: white;
         background: $primary;
         cursor: pointer;
+
+        @include buttonAnimations;
     }
 
     &__toggle {
@@ -284,6 +295,7 @@
         width: 29px;
         height: 23px;
         position: relative;
+        flex-shrink: 0;
 
         &-line {
             position: absolute;

@@ -104,6 +104,7 @@
         line-height: 21px;
         color: white;
         cursor: pointer;
+        @include buttonAnimations;
 
         @media (max-width: 576px) {
             width: 100%;
