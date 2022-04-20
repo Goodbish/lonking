@@ -50,7 +50,40 @@
         }
 
         &-image {
+            display: block;
             max-height: 150px;
+        }
+
+        &-item {
+            position: relative;
+            cursor: pointer;
+    
+            &::before {
+                content: '';
+                @include hidden-link();
+                transition: all 0.3s ease;
+                background: black;
+                opacity: 0.5;
+                z-index: 0;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 0.25;
+                }
+            }
+        
+            &:active {
+                &::before {
+                    opacity: 0.15;
+                }
+            }
+
+            &.swiper-slide-thumb-active {
+                &::before {
+                    opacity: 0;
+                }
+            }
         }
     }
 
@@ -210,6 +243,7 @@
         font-size: 18px;
         line-height: 21px;
         cursor: pointer;
+        @include buttonAnimations;
 
         &-list {
             display: grid;
@@ -227,6 +261,7 @@
             background: white;
             border: 1px solid $primary;
             color: $primary;
+            @include buttonAnimations-alt;
         }
 
         @media (max-width: 991px) {
@@ -313,12 +348,13 @@
         border: 1px solid $primary;
         font-size: 20px;
         line-height: 23px;
-        transition: all 0.3s ease   ;
         cursor: pointer;
+        @include buttonAnimations-alt;
 
         &--active {
             background: $primary;
             color: white;
+            @include buttonAnimations;
         }
 
         &-list {

@@ -102,6 +102,7 @@
         font-size: 18px;
         line-height: 21px;
         cursor: pointer;
+        @include buttonAnimations-alt;
 
         @media (max-width: 576px) {
             width: 100%;

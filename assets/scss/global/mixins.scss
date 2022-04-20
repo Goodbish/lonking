@@ -60,6 +60,29 @@
             opacity: 0.5;
         }
     }
+}
 
+@mixin buttonAnimations-alt {
+    position: relative;
+    
+    &::before {
+        content: '';
+        @include hidden-link();
+        transition: all 0.3s ease;
+        background: $primary;
+        opacity: 0;
+        z-index: 0;
+    }
 
+    &:hover {
+        &::before {
+            opacity: 0.3;
+        }
+    }
+
+    &:active {
+        &::before {
+            opacity: 0.5;
+        }
+    }
 }

@@ -211,6 +211,7 @@
         color: white;
         background: $primary;
         cursor: pointer;
+        @include buttonAnimations;
         
         @media (max-width: 576px) {
             width: 100%;

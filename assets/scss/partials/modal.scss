@@ -73,6 +73,11 @@
         max-height: 100vh;
         overflow-y: auto;
 
+        &--wide {
+            max-width: 90%;
+            height: 90%;
+        }
+
         @media (max-width: 991px) {
             // padding: 60px 16px 20px;
             height: fit-content;
@@ -125,5 +130,10 @@
 
     &__form {
         width: 100%;
+    }
+
+    &__video {
+        width: 100%;
+        height: 100%;
     }
 }

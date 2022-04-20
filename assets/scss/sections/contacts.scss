@@ -288,6 +288,7 @@
         font-size: 18px;
         line-height: 21px;
         cursor: pointer;
+        @include buttonAnimations;
     }
 
     &__slider {
@@ -344,10 +345,20 @@
     }
 
     &__location {
+        &-block {
+            max-width: 300px;
+        }
+
         &-text {
             font-weight: 700;
             font-size: 24px;
             line-height: 28px;
         }
+    }
+
+    &__toggle {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
     }
 }

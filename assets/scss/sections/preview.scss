@@ -32,6 +32,12 @@
 
         &-wrapper {
             position: relative;
+
+            &:hover {
+                .preview__image {
+                    transform: scale(1.05);
+                }
+            }
         }
 
         &::before {
@@ -79,6 +85,8 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+        transition: all 0.3s ease;
+        transform-origin: bottom;
 
         &-block {
             width: 100%;
@@ -136,6 +144,11 @@
         }
     }
 
+    &__main-link {
+        @include hidden-link;
+
+    }
+
     // *** PREVIEW CATALOG ***
 
     &-catalog {
@@ -161,12 +174,13 @@
             border: 1px solid $primary;
             font-size: 20px;
             line-height: 23px;
-            transition: all 0.3s ease   ;
+            @include buttonAnimations-alt;
             cursor: pointer;
 
             &--active {
                 background: $primary;
                 color: white;
+                @include buttonAnimations;
             }
 
             &-list {
@@ -263,6 +277,7 @@
             font-size: 18px;
             line-height: 21px;
             cursor: pointer;
+            @include buttonAnimations-alt;
     
             @media (max-width: 576px) {
                 width: 100%;

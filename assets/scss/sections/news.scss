@@ -86,6 +86,7 @@
         color: white;
         background: $primary;
         cursor: pointer;
+        @include buttonAnimations;
 
         @media (max-width: 576px) {
             width: 100%;
@@ -101,6 +102,7 @@
         color: $primary;
         border: 1px solid $primary;
         cursor: pointer;
+        @include buttonAnimations-alt;
 
         @media (max-width: 991px) {
             width: 158px;

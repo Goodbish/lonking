@@ -88,6 +88,7 @@
             color: white;
             background: $primary;
             cursor: pointer;
+            @include buttonAnimations;
     
             @media (max-width: 991px) {
                 width: 100%;

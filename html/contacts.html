@@ -23,13 +23,21 @@
                     <div class="contacts__title-block">
                         <h2 class="contacts__title contacts__title--left">Контакты</h2>
 
-                        <div class="header__location">
+                        <div class="header__location contacts__location-block select" id="select-3">
                             <img src="./assets/img/main/icons/location.png" alt="" class="header__middle-icon">
-                            <span class="header__location-active contacts__location-text">Санкт-Петербург</span>
-                                <!-- here will be sublocation -->
-    
-                            <div class="header__toggle-block">
-                                <img src="./assets/img/main/icons/arrow-toggle.png" alt="" class="header__toggle-image">
+
+                            <button type="button" class="select__toggle contacts__toggle" name="car" value="ford" data-select="toggle" data-index="1">
+                                <span class="header__location-active contacts__location-text">Санкт-Петербург</span>
+                            </button>
+                            
+
+                            <div class="select__dropdown">
+                                <ul class="select__options">
+                                  <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">Санкт-Петербург</li>
+                                  <li class="select__option select__option_selected" data-select="option" data-value="ford" data-index="1">Москва</li>
+                                  <li class="select__option" data-select="option" data-value="toyota" data-index="2">Новосибирск</li>
+                                  <li class="select__option" data-select="option" data-value="nissan" data-index="3">Екатеринбург</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
