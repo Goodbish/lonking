@@ -57,6 +57,16 @@
             place-items: center;
             width: 100%;
             height: 100%;
+
+            &:hover {
+                .videos__link-icon {
+                    filter: invert(34%) sepia(93%) saturate(5275%) hue-rotate(3deg) brightness(104%) contrast(103%);
+                }
+            }
+        }
+
+        &-icon {
+            transition: all 0.1s ease;
         }
     }
 
